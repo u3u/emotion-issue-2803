@@ -1,14 +1,5 @@
 import { Global } from '@emotion/react'
-import { omit } from 'remeda'
-import tw, { css, GlobalStyles as BaseStyles, globalStyles } from 'twin.macro'
-
-const buttons = 'button, [type="button"], [type="reset"], [type="submit"]'
-
-const baseStyles = css({
-  ...globalStyles,
-  button: tw`bg-transparent`,
-  [buttons]: omit(globalStyles[buttons] as any, ['backgroundColor']),
-})
+import tw, { css, GlobalStyles as BaseStyles } from 'twin.macro'
 
 const customStyles = css({
   'html, body, #__next': tw`h-full`,
@@ -23,7 +14,6 @@ const customStyles = css({
 export const GlobalStyles = () => (
   <>
     <BaseStyles />
-    {/* <Global styles={baseStyles} /> */}
     <Global styles={customStyles} />
   </>
 )

@@ -1,9 +1,4 @@
-import type {
-  Tuple,
-  CSSObject,
-  MantineProviderProps,
-  ButtonStylesNames,
-} from '@mantine/core'
+import type { Tuple, CSSObject, MantineProviderProps, ButtonStylesNames } from '@mantine/core'
 import tw, { theme as _theme } from 'twin.macro'
 
 const primary = Object.values(_theme`colors.primary`) as Tuple<string, 10>

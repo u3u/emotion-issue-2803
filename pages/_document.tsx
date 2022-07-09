@@ -1,13 +1,7 @@
 import { cache } from '@emotion/css'
 import createEmotionServer from '@emotion/server/create-instance'
 import { ServerStyles, createStylesServer } from '@mantine/next'
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 
 const stylesServer = createStylesServer()
 

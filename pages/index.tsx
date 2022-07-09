@@ -17,8 +17,7 @@ const IndexPage: NextPage = () => {
       </Head>
       <Title>{title}</Title>
       <Desc>
-        Global style order and duplicate introduction of{' '}
-        <code>@emotion/react</code>
+        Global style order and duplicate introduction of <code>@emotion/react</code>
       </Desc>
       <Tooltip
         label="Button background overridden by global style"
