@@ -27,7 +27,7 @@ const IndexPage: NextPage = () => {
         opened
         withArrow
       >
-        <Button tw="shadow">Button</Button>
+        <Button tw="px-4 shadow">Button</Button>
       </Tooltip>
     </Root>
   )

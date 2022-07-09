@@ -1,5 +1,6 @@
 import type { Tuple, CSSObject, MantineProviderProps, ButtonStylesNames } from '@mantine/core'
 import tw, { theme as _theme } from 'twin.macro'
+import { last } from 'remeda'
 
 const primary = Object.values(_theme`colors.primary`) as Tuple<string, 10>
 
@@ -18,4 +19,12 @@ export const styles: MantineProviderProps['styles'] = {
     root: tw`transition duration-300`,
     filled: tw`bg-primary-500 hocus:(bg-primary-400) active:(bg-primary-600)`,
   } as Record<ButtonStylesNames, CSSObject>,
+}
+
+export const emotionOptions: MantineProviderProps['emotionOptions'] = {
+  key: 'mantine',
+  insertionPoint:
+    typeof document !== 'undefined'
+      ? last([...document.querySelectorAll<HTMLElement>('style[data-emotion*="global"]')])
+      : undefined,
 }
